@@ -84,6 +84,8 @@ nav {
 .mobileMenuBrand h1 {
   font-size: 1.3em;
   white-space: nowrap;
+  margin-bottom: 0px;
+  font-weight: 800;
 }
 .openMenuBtn {
   position: relative;
@@ -237,6 +239,7 @@ nav {
   color: white;
   text-shadow: 3px 3px 5px #333;
   font-size: 5em;
+  cursor: default;
 }
 .homeHeaderText h6 {
   margin: 0;
@@ -246,20 +249,25 @@ nav {
   color: white;
   font-weight: 400;
   letter-spacing: 1px;
+  cursor: default;
 }
 .homeHeaderBtn {
   font-size: 1.5em;
   color: white;
   text-decoration: none;
-  padding: 15px 30px;
+  padding: 5px 30px;
   background: #6da75c;
   border-radius: 50px;
   box-shadow: 2px 2px 4px #333;
+  transition: all 300ms;
+  display: inline-block;
 }
 .homeHeaderBtn:hover {
-  background: #558048;
   color: #fff;
   text-decoration: none;
+  transform: translateY(-3px);
+  display: inline-block;
+  box-shadow: 1px 6px 4px #333;
 }
 
 /*Contact*/
@@ -312,6 +320,27 @@ nav {
   top: 25%;
   left: 10%;
   max-width: 550px;
+}
+.hempShopNowBtn {
+  background: #6da75c;
+  padding: 5px 30px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px #333;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  display: inline-flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms;
+  text-shadow: none;
+}
+.hempShopNowBtn:hover {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 2px 5px 6px #333;
+  transform: translateY(-3px);
 }
 .hempSectionText h1 {
   font-size: 5em;
@@ -401,6 +430,10 @@ nav {
   flex: 1;
   text-align: center;
   padding: 20px;
+}
+.textImageSectionText h1 {
+  color: #333;
+  font-size: 44px;
 }
 .shopNowBtn {
   padding: 15px 20px;
@@ -623,6 +656,22 @@ footer a:hover {
   position: absolute;
   text-align: center;
 }
+.aboutHeaderBtn {
+  color: #fff;
+  background: #6da75c;
+  padding: 5px 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: 1px 1px 3px #444;
+  transition: all 300ms;
+  display: inline-block;
+}
+.aboutHeaderBtn:hover {
+  text-decoration: none;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 1px 3px 5px #444;
+}
 .aboutHeaderText h1 {
   font-size: 6em;
   font-weight: 300;
@@ -716,12 +765,32 @@ footer a:hover {
 .storySectionText3 h1 {
   font-size: 3.2em;
 }
+.storySectionText3 a {
+  background: #6da75c;
+  border: none;
+  box-shadow: none;
+  padding: 10px 35px;
+}
+.storySectionText3 a:hover {
+  background: #6da75c;
+}
 .storySectionText3 p {
   font-size: 1.2em;
   margin: 0;
 }
 
 @media screen and (max-width: 600px) {
+  .textImageSectionImage {
+    min-width: 100%;
+  }
+  .textImageSection img {
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  .hempSection {
+    max-height: 500px;
+    min-height: 500px;
+  }
   .hempSectionText h1 {
     font-size: 2em !important;
   }
@@ -749,6 +818,7 @@ footer a:hover {
   .homeHeaderBtn {
     font-size: 1em;
   }
+
   .hempSectionText h1 {
     font-size: 3.5em;
   }
@@ -867,7 +937,7 @@ footer a:hover {
 }
 .productHeaderImageContainer {
   position: relative;
-  height: 80vh;
+  height: 50vh;
   width: 100%;
 }
 .productHeaderImageContainer img {
@@ -904,7 +974,7 @@ footer a:hover {
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 0px;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -917,24 +987,32 @@ footer a:hover {
   text-align: center;
   font-weight: 800;
   color: #333;
-  background: white;
   width: 100vw;
+  background: #fff;
+}
+.productSectionWrapper > h1:after {
+  height: 8px;
+  width: 120px;
+  background: #6da75c;
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 .productSection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 .productImageWrapper {
   background: white;
   border-radius: 2px;
-  box-shadow: 2px 2px 5px #333;
+  box-shadow: 0px 2px 5px #ccc;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 0px 20px;
   margin-top: 60px;
   padding: 20px;
   width: 250px;
@@ -947,9 +1025,10 @@ footer a:hover {
   max-height: 250px;
   transition: all 100ms;
   bottom: 0;
+  transition: all 300ms;
 }
 .productImage img:hover {
-  transform: scale(1.08);
+  transform: scale(1.02);
 }
 .productImageText {
   display: flex;
@@ -975,7 +1054,6 @@ footer a:hover {
   background: #6da75c;
   text-align: center;
   border-radius: 4px;
-  box-shadow: 2px 4px 5px #333;
   text-decoration: none;
   color: white;
   font-weight: 600;
@@ -986,6 +1064,13 @@ footer a:hover {
   color: white;
   text-decoration: none;
   background: #69af55;
+}
+@media screen and (max-width: 600px) {
+  .productHeaderText h1 {
+    font-size: 45px;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .blogContainer {
@@ -1003,20 +1088,22 @@ footer a:hover {
   font-size: 3em;
   font-weight: 800;
   text-align: center;
+  padding: 0px 30px;
 }
 .blogContainer h3 {
   text-align: center;
-  width: 200px;
-  padding: 10px 20px;
+  width: 250px;
+  padding: 9px 20px;
+  font-weight: 450;
   margin: 0 auto;
   border-radius: 20px;
   background: #6da75c;
   transition: all 200ms;
+  box-shadow: 2px 2px 4px #aaa;
 }
 .blogContainer h3:hover {
   transform: translateY(-6px);
-  box-shadow: 0px 2px 2px #333;
-  background: #6da76f;
+  box-shadow: 0px 2px 4px #333;
 }
 .blogContainer a {
   color: white;
@@ -1026,7 +1113,6 @@ footer a:hover {
   color: white;
   text-decoration: none;
 }
-
 
 .greenBG {
   position: fixed;
@@ -1038,9 +1124,8 @@ footer a:hover {
 
 .stop-scrolling {
   height: 100vh;
-  overflow-Y: hidden ;
+  overflow-y: hidden;
 }
-
 
 .popUp {
   position: fixed;
@@ -1078,7 +1163,7 @@ footer a:hover {
   }
   .popUpTextContent {
     font-size: 18px;
-    max-width: 80% !important;;
+    max-width: 80% !important;
   }
   .popUpJoinNowBtn {
     font-size: 16px;
@@ -1098,17 +1183,17 @@ footer a:hover {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   cursor: pointer;
-  transition: all 150ms
+  transition: all 150ms;
 }
 .popUpExitBtnContainer:hover {
   background: #777;
 }
 .popUpExitBtn {
-  transform: translate(-4px) rotate(-90deg) ;
+  transform: translate(-4px) rotate(-90deg);
   font-size: 3em;
   color: white;
 }
-.popUpOpenBtn{
+.popUpOpenBtn {
   transform: translate(4px) rotate(90deg);
 }
 .hidePopUp {
@@ -1145,4 +1230,3 @@ footer a:hover {
   color: white;
   box-shadow: 0px 1px 2px #555;
 }
-

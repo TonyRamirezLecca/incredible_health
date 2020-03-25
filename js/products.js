@@ -5,15 +5,9 @@ function parallax() {
 
     var img1Position = 0;
 
-    var img2ContainerPosition = document.querySelector(".hempSection")
-      .offsetTop;
-    var img2Position =
-      document.querySelector("#parallaxImg2").offsetTop + img2ContainerPosition;
+    var img2Position = document.querySelector("#parallaxImg2").offsetTop;
 
-    var img3ContainerPosition = document.querySelector(".textImageSection")
-      .offsetTop;
-    var img3Position =
-      document.querySelector("#parallaxImg3").offsetTop + img3ContainerPosition;
+    var img3Position = document.querySelector("#parallaxImg3").offsetTop;
 
     if (pagePosition - windowHeight <= windowHeight) {
       document.querySelector(
